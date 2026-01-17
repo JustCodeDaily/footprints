@@ -20,12 +20,12 @@ export function MonthSection({ month, year, monthIndex }: MonthSectionProps) {
         h-screen 
         snap-start  
         bg-[#faf8f4]
-        px-12
-        pt-16
         relative
         overflow-hidden
       "
     >
+      <div className="relative flex flex-col items-center pt-16"></div>
+
       <div
         className="
     absolute
@@ -37,34 +37,27 @@ export function MonthSection({ month, year, monthIndex }: MonthSectionProps) {
   "
       />
       {/* Month title */}
-      <div className="mb-10">
-        <h1
-          className="
-    text-[clamp(3rem,6vw,4.5rem)]
-    font-serif
-    font-medium
-    tracking-tight
-    text-neutral-800
-  "
-        >
-          {month}
-        </h1>
-        <p
-          className="
-    mt-2
-    text-xs
-    tracking-[0.3em]
-    text-neutral-500
-    uppercase
-  "
-        >
+
+      <div className="mb-14 text-center">
+        <h1 className="font-serif text-5xl text-neutral-800">{month}</h1>
+        <p className="mt-2 text-xs tracking-[0.3em] text-neutral-500 uppercase">
           {year}
         </p>
       </div>
-
-      {/* Weekday header */}
-      <WeekDayHeader />
-      <CalendarGrid year={year} monthIndex={monthIndex} />
+      <div
+        className="
+    absolute
+    left-1/2
+    top-1/2
+    -translate-x-1/2
+    -translate-y-1/2
+  "
+      >
+        <div className="w-[360px]">
+          <WeekDayHeader />
+          <CalendarGrid year={year} monthIndex={monthIndex} />
+        </div>
+      </div>
     </section>
   );
 }
