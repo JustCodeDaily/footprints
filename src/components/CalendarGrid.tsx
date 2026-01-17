@@ -1,28 +1,23 @@
-import {
-  getFirstDayOfTheWeek,
-  getDaysInMonth,
-} from "../utilities";
+import { getFirstDayOfTheWeek, getDaysInMonth } from "../utilities";
 
 interface CalendarGridProps {
-    rows?: number;
-    year: number;
-    monthIndex:number;
+  rows?: number;
+  year: number;
+  monthIndex: number;
 }
 
-export function CalendarGrid({year, monthIndex}:CalendarGridProps) {
-    const firstDayOfMonth = new Date(year, monthIndex, 1);
-      const daysInMonth = getDaysInMonth(year, monthIndex);
+export function CalendarGrid({ year, monthIndex }: CalendarGridProps) {
+  
+  const firstDayOfMonth = new Date(year, monthIndex, 1);
   const startOffset = getFirstDayOfTheWeek(firstDayOfMonth);
+  const daysInMonth = getDaysInMonth(year, monthIndex);
+  const totalCells = 42;
 
-   const totalCells = 42;
-
-
-return (
+  return (
     <div className="mt-8 grid grid-cols-7 gap-y-6">
       {Array.from({ length: totalCells }).map((_, index) => {
         const dayNumber = index - startOffset + 1;
-        const isValidDay =
-          dayNumber > 0 && dayNumber <= daysInMonth;
+        const isValidDay = dayNumber > 0 && dayNumber <= daysInMonth;
 
         return (
           <div
@@ -43,4 +38,3 @@ return (
     </div>
   );
 }
-

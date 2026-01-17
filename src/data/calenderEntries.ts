@@ -7,30 +7,30 @@ export interface CalendarEntry {
 }
 
 export const calendarEntries: Record<string, CalendarEntry> = {
-  "2025-01-05": {
-    date: "2025-01-05",
-    text: "New year resolutions written in a leather journal.",
+  "2025-01-06": {
+    date: "2025-01-06",
+    text: "My first flight of the year",
     image: "https://images.unsplash.com/photo-1517842645767-c639042777db?w=300&h=200&fit=crop",
     textOffset: { x: 100, y: -160 },
     imageOffset: { x: -80, y: 180 },
   },
-  "2025-01-12": {
-    date: "2025-01-12",
-    text: "Sunday morning hike. Fresh air cleared the mind.",
+  "2025-01-07": {
+    date: "2025-01-07",
+    text: "And my second one of the year.",
     image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=300&h=200&fit=crop",
     textOffset: { x: -100, y: -200 },
     imageOffset: { x: 120, y: 140 },
   },
-  "2025-01-15": {
-    date: "2025-01-15",
-    text: "First snow of the year. The world turned quiet.",
+  "2025-01-11": {
+    date: "2025-01-11",
+    text: "Someone special knocked my door",
     image: "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=300&h=200&fit=crop",
     textOffset: { x: -120, y: -180 },
     imageOffset: { x: 80, y: 160 },
   },
-  "2025-01-28": {
-    date: "2025-01-28",
-    text: "Late night tea and old vinyl records spinning.",
+  "2025-01-16": {
+    date: "2025-01-16",
+    text: "When a wine girl meets a whiskey boy",
     image: "https://images.unsplash.com/photo-1461360228754-6e81c478b882?w=300&h=200&fit=crop",
     textOffset: { x: 80, y: -140 },
     imageOffset: { x: -60, y: 200 },

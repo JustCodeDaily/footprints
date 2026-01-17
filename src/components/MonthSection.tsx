@@ -1,13 +1,11 @@
 import { WeekDayHeader } from "./WeekDayHeader";
 import { CalendarGrid } from "./CalendarGrid";
 
-
 interface MonthSectionProps {
   month: string;
   year: number;
   monthIndex: number;
 }
-
 
 interface MonthSectionProps {
   month: string;
@@ -66,10 +64,7 @@ export function MonthSection({ month, year, monthIndex }: MonthSectionProps) {
 
       {/* Weekday header */}
       <WeekDayHeader />
-      <CalendarGrid 
-          year={year}
-        monthIndex={monthIndex}
-/>
+      <CalendarGrid year={year} monthIndex={monthIndex} />
     </section>
   );
 }
